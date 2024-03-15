@@ -1,0 +1,149 @@
+
+
+*, body {
+   font-family: 'Syne', sans-serif !important;
+}
+
+/* HEADER */
+
+#site-header.sticky-top {
+    position: sticky;
+    z-index: 10;
+    top: 0;
+    background-color: #C8D6CF;
+ }
+
+ .inside-header {
+   padding: 0px 40px !important;
+ }
+
+ .site-header .header-image {
+   vertical-align: middle;
+   margin-left: 38px;
+ }
+
+ main-navigation .main-nav ul li a {
+   padding-top: 20px !important;
+   padding-left: 50px !important;
+   padding-right: 50px !important;
+   line-height: 60px;
+ }
+ 
+ li.menu-item a {
+    color: #000000 !important;
+    font-size: 19px !important;
+    display: inline-block;
+    padding: 10px 50px !important;
+    border-radius: 1px;
+    text-align: center;
+ }
+ 
+ li.menu-item a:hover,
+ li.menu-item.current-menu-item a {
+    color: #FFFFFF !important;
+    background-color:#E0B9B4 !important;
+    text-decoration: none !important;
+ }
+
+ .separate-containers .site-main {
+   margin-top: 0px !important;
+   
+ }
+ /*Personnalisation des éléments du body */
+
+ /*Personnalisation des blocs page */ 
+ .top-block-xl{
+   margin-top: 100px !important;
+ }
+ .top-block{
+   margin-top: 20px !important;
+ }
+ .top-block-title{
+   margin-top: 0 !important;
+   padding-top: 0 !important;
+ }
+ .down-block{
+   margin-bottom: 52px !important;
+ }
+ .down-block-xs{
+   z-index: 1;
+   margin-bottom: -20px !important;
+   padding: 0 !important;
+   height: 30px;
+   gap: 0;
+ }
+.width-block-m{
+   width: 100% !important;
+}
+ .negative-down-block{
+   margin-top: -80px !important;
+ }
+ .block-size{
+   flex-basis: 80% !important;
+   text-align: center;
+ }
+
+ /*Personnalisation des boutons */
+ .button-settings{
+   padding: 40px 40px !important;
+ }
+
+ /*Personnalisation des bordures de block */
+ .parent-rounded-container {
+   position: relative;
+   padding-top: 0 !important;
+   margin-top: 0 !important;
+   overflow: hidden; /* Cache les parties du bloc enfant qui dépassent */
+}
+ .border-block {
+   position: absolute;
+   border-bottom: 10px solid #e3d9d0;
+   border-radius: 50% / 100%; /* Arrondi horizontal à 50% et vertical à 100% pour l'effet ovale en bas */
+   padding-top: 80px !important;
+   margin-top: 0;
+   top: 0;
+   left: 50%; /* Position horizontale initiale (centrée par rapport au parent) */
+   transform: translateX(-50%); /* Centrage parfait horizontalement */
+   width: 200%;
+   border-radius: 0 0 45% 45%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
+   overflow: hidden; /* Assurez-vous que le contenu interne s'adapte également à cette forme arrondie */
+}
+ 
+/* Conteneur parent avec position relative */
+.wp-block-group {
+   position: relative;
+}
+/* Style pour image de fond */
+.background-image {
+   z-index: 2;
+   position: relative; /* ou absolute si nécessaire */
+}
+/* Style pour superposer les images */
+.left-lief{
+   position: absolute;
+   left: 43.8%;
+   top: 66.6%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+}
+.right-lief{
+   position: absolute;
+   left: 56%;
+   top: 66.6%;
+   transform: translate(-50%, -50%);
+   z-index: 1;
+}
+
+ /* FOOTER */
+ #site-footer {
+   position: fixed;
+   bottom: 0;
+   width: 100%;
+   margin-top: 10px !important;
+   margin-bottom: 0px !important;
+   padding: 25px;
+   padding-bottom: 0px;
+   text-align: center;
+   background-color: #FFFFFF !important;
+   z-index: 10 !important;
+}
