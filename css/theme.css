@@ -49,6 +49,8 @@
    margin-top: 0px !important;
    
  }
+
+
  /*Personnalisation des éléments du body */
 
  /*Personnalisation des blocs page */ 
@@ -58,12 +60,22 @@
  .top-block{
    margin-top: 20px !important;
  }
+ .top-block-l{
+   margin-top: 50px !important;
+ }
  .top-block-title{
    margin-top: 0 !important;
    padding-top: 0 !important;
  }
+ .top-block-title-neg{
+   margin-top: -40px !important;
+   padding-top: 0 !important;
+ }
  .down-block{
    margin-bottom: 52px !important;
+ }
+ .down-block-sm{
+   margin-bottom: 17px !important;
  }
  .down-block-xs{
    z-index: 1;
@@ -72,9 +84,56 @@
    height: 30px;
    gap: 0;
  }
+
+ .down-block-0{
+  margin-top: 0 !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+ }
+ .down-block-1{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+ }
+ .center-block{
+  margin-top: auto !important;
+ }
+ .center-block-1{
+  margin-bottom: auto !important;
+ }
+ .center-block-2{
+  margin: auto !important;
+ }
+.left-block{
+  margin-left: 0 !important;
+  padding-left: 0 !important;
+
+}
+
 .width-block-m{
    width: 100% !important;
 }
+.width-block-m1{
+   width: 85% !important;
+}
+.width-block-m2{
+   width: 70% !important;
+   margin: 0 auto !important;
+}
+.width-block-m3{
+   width: 77% !important;
+   margin: 0 auto !important;
+}
+.width-block-sm{
+  position: relative !important;
+  width: 70% !important;
+  justify-content: center !important;
+  align-items: center !important;
+  margin: 0px auto !important;
+  padding-bottom: 0 !important;
+  padding-top: 0 !important;
+
+}
+
  .negative-down-block{
    margin-top: -80px !important;
  }
@@ -83,7 +142,31 @@
    text-align: center;
  }
 
- /*Personnalisation des boutons */
+ /*Personnalisation du formulaire */
+
+ .font{
+  font-weight: 400 !important;
+ }
+ .font-lg{
+  font-weight: 800 !important;
+  font-size: 21px !important;
+  margin: auto !important;
+ }
+.strong {
+  font-weight: 800 !important;
+  font-size: 20px !important;
+}
+ .center-button {
+  font-size: 13px !important;
+  height: auto !important;
+  display: block;
+  padding: 18px 70px !important;
+  margin: 0 auto !important;
+  margin-bottom: 20px !important;
+  text-align: center; 
+  background-color: #E0B9B4 !important;
+}
+
  .button-settings{
    padding: 40px 40px !important;
  }
@@ -93,7 +176,7 @@
    position: relative;
    padding-top: 0 !important;
    margin-top: 0 !important;
-   overflow: hidden; /* Cache les parties du bloc enfant qui dépassent */
+   overflow: hidden !important; /* Cache les parties du bloc enfant qui dépassent */
 }
  .border-block {
    position: absolute;
@@ -108,10 +191,24 @@
    border-radius: 0 0 45% 45%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
    overflow: hidden; /* Assurez-vous que le contenu interne s'adapte également à cette forme arrondie */
 }
+ .border-block2 {
+   position: absolute;
+   border-radius: 50% / 100%; /* Arrondi horizontal à 50% et vertical à 100% pour l'effet ovale en bas */
+   padding-top: 135px !important;
+   padding-bottom: 0px !important;
+   margin-top: 0;
+   top: 0;
+   left: 53.5%; /* Position horizontale initiale (centrée par rapport au parent) */
+   transform: translateX(-50%); /* Centrage parfait horizontalement */
+   width: 125%;
+   border-radius: 0 0 100% 100%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
+   overflow: hidden; /* Assurez-vous que le contenu interne s'adapte également à cette forme arrondie */
+}
  
 /* Conteneur parent avec position relative */
 .wp-block-group {
    position: relative;
+   z-index: 2;
 }
 /* Style pour image de fond */
 .background-image {
@@ -133,6 +230,35 @@
    transform: translate(-50%, -50%);
    z-index: 1;
 }
+.vegetal1{
+  position: absolute;
+  left: 21%;
+  top: 34%;
+  transform: translate(-50%, -50%);
+
+}
+.vegetal2{
+  position: absolute;
+  left: 38.5%;
+  top: 63%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+.vegetal3{
+  padding-top: 0 !important;
+  margin-top: 0 !important;
+  position: absolute;
+  left: 88%;
+  top: 73%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+
+}
+
+
+
+
 
  /* FOOTER */
  #site-footer {
