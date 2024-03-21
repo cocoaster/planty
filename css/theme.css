@@ -38,12 +38,12 @@
     text-align: center;
  }
  
- li.menu-item a:hover,
+ /* li.menu-item a:hover,
  li.menu-item.current-menu-item a {
     color: #FFFFFF !important;
     background-color:#E0B9B4 !important;
     text-decoration: none !important;
- }
+ } */
 
  .separate-containers .site-main {
    margin-top: 0px !important;
@@ -58,7 +58,10 @@
    margin-top: 100px !important;
  }
  .top-block{
-   margin-top: 20px !important;
+   margin-top: 10px !important;
+ }
+ .top-block-S{
+   margin-top: 12px !important;
  }
  .top-block-l{
    margin-top: 50px !important;
@@ -102,6 +105,14 @@
  }
  .center-block-2{
   margin: auto !important;
+ }
+ .center-block-left-right{
+  position: relative !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  align-items: center !important;
+  justify-content: center !important;
+ z-index: 10 !important;
  }
 .left-block{
   margin-left: 0 !important;
@@ -173,23 +184,20 @@
 
  /*Personnalisation des bordures de block */
  .parent-rounded-container {
-   position: relative;
-   padding-top: 0 !important;
-   margin-top: 0 !important;
-   overflow: hidden !important; /* Cache les parties du bloc enfant qui dépassent */
+  position: relative;
+  overflow-x: hidden !important;
+
+  /* autres styles nécessaires pour le conteneur */
 }
  .border-block {
-   position: absolute;
-   border-bottom: 10px solid #e3d9d0;
-   border-radius: 50% / 100%; /* Arrondi horizontal à 50% et vertical à 100% pour l'effet ovale en bas */
-   padding-top: 80px !important;
-   margin-top: 0;
-   top: 0;
-   left: 50%; /* Position horizontale initiale (centrée par rapport au parent) */
-   transform: translateX(-50%); /* Centrage parfait horizontalement */
-   width: 200%;
-   border-radius: 0 0 45% 45%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
-   overflow: hidden; /* Assurez-vous que le contenu interne s'adapte également à cette forme arrondie */
+  position: relative;
+  z-index: -1;
+  border-bottom: 10px solid #e3d9d0;
+  padding-top: 80px !important;
+  left: 50%;
+  transform: translateX(-50%); /* Centrage parfait horizontalement */
+  width: 200%;
+  border-radius: 0 0 45% 45%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
 }
  .border-block2 {
    position: absolute;
@@ -256,9 +264,102 @@
 
 }
 
+/* Personnalisation de l'ajout des quantités */
+.fruit-quantity-block {
+  display: inline-block;
+  margin: 10px;
+  text-align: center;
+}
+
+.fruit-image-container {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.fruit-image {
+  display: block; 
+  height: auto;}
+
+.fruit-name {
+  text-transform: uppercase;
+  font-weight: 800;
+  position: absolute;
+    top: 50%; /* Positionner à 50% du haut du conteneur */
+    left: 50%; /* Positionner à 50% de la gauche du conteneur */
+    transform: translate(-50%, -50%); /* Décaler le texte pour le centrer exactement */
+  width: 100%;
+  font-size: 18px !important;
+  color: white;
+  padding: 5px 0;
+}
+
+.quantity-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.quantity-change {
+  background-color: #DC9F96;
+  border: none;
+  width: 27px;
+  height: 27.75px;
+  cursor: pointer;
+  font-size: 0.5em; /* Ajuster selon le design souhaité */
+  padding: 0 !important;
+
+}
+
+/* Spécifique pour les boutons plus et moins afin qu'ils soient de même largeur */
+.quantity-plus,
+.quantity-minus {
+    text-align: center;
+}
+.quantity-plus {
+  border-bottom: 1px solid white; /* Ajoute une bordure blanche en bas du bouton "+" */
+}
 
 
+.quantity-input {
+  font-family: inter !important;
+  border-radius: 5px 0 0 5px !important;
+  width: 36px;
+  height: 56px;
+  text-align: center;
+  font-size: 16px;
+  padding: 0 !important;
+}
 
+.quantity-buttons {
+  display: flex;
+  flex-direction: column; /* Empile les boutons verticalement */
+  border-radius: 0 5px 5px 0;
+  overflow: hidden;
+
+}
+
+.quantity-submit {
+  background-color: #E0B9B4;
+  border-radius: 5px;
+  padding: 20px 39px;
+  border: none;
+  cursor: pointer;
+  font-size: 0.6em; /* Ajuster selon le design souhaité */
+    margin-left: 14px; /* Espacement entre les boutons de quantité et le bouton OK */
+}
+
+
+/* Cacher les flèches du champ de type number */
+.quantity-input::-webkit-inner-spin-button,
+.quantity-input::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.quantity-input {
+  -moz-appearance: textfield; /* Firefox */
+}
 
  /* FOOTER */
  #site-footer {
