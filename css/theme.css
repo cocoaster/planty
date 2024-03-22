@@ -220,29 +220,34 @@
   font-weight: 700 !important;
 }
 
+.field-blocks{
+  margin-top: 20px !important;
+}
 .pre-order-fields{
   font-weight: 400 !important;
   font-size: 19px !important;
-  border-radius: 10px !important;
-
 }
  p{
   margin-bottom: 0 !important;
 }
 
-.input[type="text"]{
-  border-radius: 10px !important;
 
-}
-.wpcf7-form-control, .input[type="text"], .wpcf7-text{
+
+.input[type="text"], .wpcf7-text{
   border-radius: 5px !important;
   padding: 17px 15px !important;
+  margin-top: 6px !important;
 }
 
 .submit-order{
   margin: auto;
   margin-top: 40px;
   width: auto;
+}
+.wpcf7-submit{
+  padding: 13px 50px !important;
+  font-size: 14px !important;
+  border-radius: 4px;
 }
 .wpcf7-spinner{
   display: none !important;
@@ -439,4 +444,7 @@
    text-align: center;
    background-color: #FFFFFF !important;
    z-index: 10 !important;
+}
+.footer-content{
+  margin-bottom: 1.5em;
 }
