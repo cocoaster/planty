@@ -45,3 +45,27 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
+// document.addEventListener('DOMContentLoaded', function() {
+//     var submitButton = document.querySelector('.wpcf7-submit');
+
+//     submitButton.addEventListener('click', function(event) {
+//         var fruitData = collectFruitData(); // Implémentez cette fonction pour collecter les données des fruits
+//         var fruitQuantitiesField = document.querySelector('input[name="fruit_quantities"]');
+
+//         if (fruitQuantitiesField) {
+//             fruitQuantitiesField.value = JSON.stringify(fruitData);
+//         }
+//     });
+// });
+
+// // Exemple d'une fonction pour collecter les données des fruits
+// function collectFruitData() {
+//     var data = {};
+//     // Suppose que vos inputs de quantité ont une classe spécifique ou une structure identifiable
+//     var inputs = document.querySelectorAll('.quantity-input');
+//     inputs.forEach(function(input) {
+//         var fruitName = input.getAttribute('data-fruit-name'); // Assurez-vous que chaque input a cet attribut
+//         data[fruitName] = input.value;
+//     });
+//     return data;
+// }

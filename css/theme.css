@@ -54,6 +54,10 @@
  /*Personnalisation des éléments du body */
 
  /*Personnalisation des blocs page */ 
+ .padding-block-0{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+ }
  .top-block-xl{
    margin-top: 100px !important;
  }
@@ -72,6 +76,10 @@
  }
  .top-block-title-neg{
    margin-top: -40px !important;
+   padding-top: 0 !important;
+ }
+ .top-block-title-neg-1{
+   margin-top: -20px !important;
    padding-top: 0 !important;
  }
  .down-block{
@@ -153,7 +161,7 @@
    text-align: center;
  }
 
- /*Personnalisation du formulaire */
+ /*Personnalisation du 1er formulaire */
 
  .font{
   font-weight: 400 !important;
@@ -181,6 +189,64 @@
  .button-settings{
    padding: 40px 40px !important;
  }
+
+  /*Personnalisation du formulaire de précommande */
+  .pre-order-form-block{
+    margin: auto !important;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+  }
+.pre-order-form{
+  
+  display: flex ;
+  justify-content: space-between;
+  padding-top: 50px;
+}
+.form-column-1, .form-column-2{
+  width: 50%;
+}
+
+.form-column-1{
+  padding-right: 50px !important;
+  border-right: 1px solid #FFFFFF;
+  padding-bottom: 0 !important;
+}
+
+.form-column-2{
+  padding-left: 50px !important;
+}
+.pre-order-title-form{
+  font-weight: 700 !important;
+}
+
+.pre-order-fields{
+  font-weight: 400 !important;
+  font-size: 19px !important;
+  border-radius: 10px !important;
+
+}
+ p{
+  margin-bottom: 0 !important;
+}
+
+.input[type="text"]{
+  border-radius: 10px !important;
+
+}
+.wpcf7-form-control, .input[type="text"], .wpcf7-text{
+  border-radius: 5px !important;
+  padding: 17px 15px !important;
+}
+
+.submit-order{
+  margin: auto;
+  margin-top: 40px;
+  width: auto;
+}
+.wpcf7-spinner{
+  display: none !important;
+}
 
  /*Personnalisation des bordures de block */
  .parent-rounded-container {
@@ -285,9 +351,9 @@
   text-transform: uppercase;
   font-weight: 800;
   position: absolute;
-    top: 50%; /* Positionner à 50% du haut du conteneur */
-    left: 50%; /* Positionner à 50% de la gauche du conteneur */
-    transform: translate(-50%, -50%); /* Décaler le texte pour le centrer exactement */
+  top: 50%; /* Positionner à 50% du haut du conteneur */
+  left: 50%; /* Positionner à 50% de la gauche du conteneur */
+  transform: translate(-50%, -50%); /* Décaler le texte pour le centrer exactement */
   width: 100%;
   font-size: 18px !important;
   color: white;
