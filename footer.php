@@ -12,7 +12,7 @@ if ( ! defined( 'ABSPATH' ) ) {
 
 <footer id="site-footer" role="contentinfo">
     <div class="footer-content">
-        <p>Mentions légales</p>
+    <p><a class="footer-link" href="http://localhost/planty/?page_id=37">Mentions légales</a></p>
         <!-- Ajoutez votre HTML personnalisé ici -->
     </div>
 </footer>

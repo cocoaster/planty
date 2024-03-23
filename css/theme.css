@@ -38,12 +38,11 @@
     text-align: center;
  }
  
- /* li.menu-item a:hover,
- li.menu-item.current-menu-item a {
-    color: #FFFFFF !important;
-    background-color:#E0B9B4 !important;
-    text-decoration: none !important;
- } */
+/* Cible le dernier élément "li" du menu */
+nav ul li:last-child {
+  background: #DC9F96;
+ 
+}
 
  .separate-containers .site-main {
    margin-top: 0px !important;
@@ -446,5 +445,11 @@
    z-index: 10 !important;
 }
 .footer-content{
-  margin-bottom: 1.5em;
+  padding-bottom: 40px !important;
+}
+.footer-link{
+  color: #000000 !important;
+}
+.footer-link:hover{
+  color: #E0B9B4 !important;
 }

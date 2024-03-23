@@ -57,4 +57,25 @@ function enqueue_custom_script() {
 
 add_action('wp_enqueue_scripts', 'enqueue_custom_script');
 
+// Fonction pour ajouter l'item admin quand un usager est conneecter à wordpress
+function add_admin_menu_item_conditionally( $items, $args ) {
+    if ( is_user_logged_in() && 'primary' === $args->theme_location ) {
+        // Créez le nouvel élément de menu
+        $new_item = '<li class="menu-item"><a href="' . admin_url() . '">Admin</a></li>';
+        
+        // Divisez les éléments de menu existants en un tableau
+        $menu_items = explode('</li>', $items);
+        
+        // Insérez le nouvel élément à la position souhaitée
+        array_splice($menu_items, 1, 0, $new_item); // Le 1 ici indique la position après le premier élément
+        
+        // Recombinez les éléments de menu en une chaîne
+        $items = implode('</li>', $menu_items);
+    }
+
+    return $items;
+}
+add_filter( 'wp_nav_menu_items', 'add_admin_menu_item_conditionally', 10, 2 );
+
+
    
