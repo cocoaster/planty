@@ -334,50 +334,68 @@ nav ul li:last-child {
 
 }
 
-/* Personnalisation de l'ajout des quantités */
-.fruit-quantity-block {
+/* Personnalisation des produits et de l'ajout de quantités */
+.container-of-product-quantity-blocks {
+  display: flex;
+  gap: 13px;
+  flex-wrap: wrap;
+  width: 70%;
+  margin: 0 auto !important;
+  align-items: center;
+}
+
+.product-quantity-block {
+  position: relative;
   display: inline-block;
   margin: 10px;
   text-align: center;
+  width: calc(25% - 30px); /* Ajuste la largeur pour tenir compte des marges */
+  vertical-align: top; /* Aligner les éléments en haut */
 }
-
-.fruit-image-container {
-  position: relative;
+.product-image-and-number{
+  display: flex;
+  flex-direction: column;
+}
+.product-image-container {
   display: inline-block;
   margin-bottom: 5px;
 }
 
-.fruit-image {
-  display: block; 
-  height: auto;}
+.product-image {
+  position: relative;
+  display: block;
+  height: auto;
+}
 
-.fruit-name {
+.product-name {
   text-transform: uppercase;
+  width: 100%;
   font-weight: 800;
   position: absolute;
-  top: 50%; /* Positionner à 50% du haut du conteneur */
-  left: 50%; /* Positionner à 50% de la gauche du conteneur */
-  transform: translate(-50%, -50%); /* Décaler le texte pour le centrer exactement */
-  width: 100%;
-  font-size: 18px !important;
+  top: 32%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px !important;
   color: white;
-  padding: 5px 0;
 }
 
 .quantity-controls {
   display: flex;
   align-items: center;
   justify-content: center;
+  margin-top: 15px;
+  margin-bottom: 40px;
 }
 
 .quantity-change {
   background-color: #DC9F96;
   border: none;
-  width: 27px;
-  height: 27.75px;
+  width: 45px;
+  height: 31.75px;
   cursor: pointer;
-  font-size: 0.5em; /* Ajuster selon le design souhaité */
+  font-size: 1em; /* Ajuster selon le design souhaité */
   padding: 0 !important;
+  
 
 }
 
@@ -394,11 +412,10 @@ nav ul li:last-child {
 .quantity-input {
   font-family: inter !important;
   border-radius: 5px 0 0 5px !important;
-  width: 36px;
-  height: 56px;
+  width: 59px;
+  height: 63.5px;
   text-align: center;
-  font-size: 16px;
-  padding: 0 !important;
+  font-size: 23px;
 }
 
 .quantity-buttons {
@@ -409,6 +426,14 @@ nav ul li:last-child {
 
 }
 
+.submit-container{
+  margin-left: 15px;
+}
+
+.submit-quantity{
+  padding: 18px 63px;
+  border-radius: 4px;
+}
 .quantity-submit {
   background-color: #E0B9B4;
   border-radius: 5px;
@@ -429,6 +454,14 @@ nav ul li:last-child {
 
 .quantity-input {
   -moz-appearance: textfield; /* Firefox */
+}
+.pre-order-form{
+  display: flex;
+  
+}
+
+.form-column-2{
+  padding-left: 150px !important;
 }
 
  /* FOOTER */
@@ -452,4 +485,76 @@ nav ul li:last-child {
 }
 .footer-link:hover{
   color: #E0B9B4 !important;
+}
+
+/* MEDIA QUERIES */
+/* Pour les petits laptops et desktops */
+@media (max-width: 1530px) {
+  .inside-header{
+    padding: 0 !important;
+  }
+}
+
+@media (max-width: 1376px) {
+  .quantity-submit{
+    padding: 20px 19px !important;
+  }
+}
+
+/* Pour tablettes en mode paysage et petits desktops */
+
+@media (max-width: 1200px) {
+  .quantity-submit{
+    padding: 20px 50px !important;
+    
+  }
+  .width-block-m2 {
+    flex-direction: column !important;
+  }
+  .pre-order-form{
+    flex-direction: column !important;
+    justify-content: center !important;
+
+  }
+  .form-column-1, .form-column-2{
+    width: 100% !important;
+    border-right: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 0 !important;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+
+  }
+  .form-column-1{
+    padding-bottom: 60px !important;
+  }
+  .label{
+    margin-left: 0 !important;
+    text-align: start;
+  }
+  .form-column-2{
+    padding-bottom: 30px !important;
+  }
+
+}
+
+/* Pour tablettes en mode portrait */
+@media (max-width: 900px) {
+ 
+}
+
+/* Pour téléphones en mode paysage */
+@media (max-width: 600px) {
+ 
+}
+
+/* Pour téléphones en mode portrait */
+@media (max-width: 480px) {
+  h2{
+    font-size: 25px !important;
+  }
+ h3{
+  text-align: center !important;
+ }
 }
