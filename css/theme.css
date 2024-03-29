@@ -61,7 +61,7 @@ nav ul li:last-child {
    margin-top: 100px !important;
  }
  .top-block{
-   margin-top: 10px !important;
+   margin-top: 38px !important;
  }
  .top-block-S{
    margin-top: 12px !important;
@@ -189,69 +189,6 @@ nav ul li:last-child {
    padding: 40px 40px !important;
  }
 
-  /*Personnalisation du formulaire de précommande */
-  .pre-order-form-block{
-    margin: auto !important;
-    width: 70%;
-    display: flex;
-    flex-direction: column;
-  }
-.pre-order-form{
-  
-  display: flex ;
-  justify-content: space-between;
-  padding-top: 50px;
-}
-.form-column-1, .form-column-2{
-  width: 50%;
-}
-
-.form-column-1{
-  padding-right: 50px !important;
-  border-right: 1px solid #FFFFFF;
-  padding-bottom: 0 !important;
-}
-
-.form-column-2{
-  padding-left: 50px !important;
-}
-.pre-order-title-form{
-  font-weight: 700 !important;
-}
-
-.field-blocks{
-  margin-top: 20px !important;
-}
-.pre-order-fields{
-  font-weight: 400 !important;
-  font-size: 19px !important;
-}
- p{
-  margin-bottom: 0 !important;
-}
-
-
-
-.input[type="text"], .wpcf7-text{
-  border-radius: 5px !important;
-  padding: 17px 15px !important;
-  margin-top: 6px !important;
-}
-
-.submit-order{
-  margin: auto;
-  margin-top: 40px;
-  width: auto;
-}
-.wpcf7-submit{
-  padding: 13px 50px !important;
-  font-size: 14px !important;
-  border-radius: 4px;
-}
-.wpcf7-spinner{
-  display: none !important;
-}
-
  /*Personnalisation des bordures de block */
  .parent-rounded-container {
   position: relative;
@@ -335,6 +272,9 @@ nav ul li:last-child {
 }
 
 /* Personnalisation des produits et de l'ajout de quantités */
+.wp-block-separator{
+  margin-bottom: 51px;
+}
 .container-of-product-quantity-blocks {
   display: flex;
   gap: 13px;
@@ -372,7 +312,7 @@ nav ul li:last-child {
   width: 100%;
   font-weight: 800;
   position: absolute;
-  top: 32%;
+  top: 28%;
   left: 50%;
   transform: translate(-50%, -50%);
   font-size: 30px !important;
@@ -423,7 +363,6 @@ nav ul li:last-child {
   flex-direction: column; /* Empile les boutons verticalement */
   border-radius: 0 5px 5px 0;
   overflow: hidden;
-
 }
 
 .submit-container{
@@ -455,15 +394,95 @@ nav ul li:last-child {
 .quantity-input {
   -moz-appearance: textfield; /* Firefox */
 }
-.pre-order-form{
+
+
+/* Contact form 7 */
+ /*Personnalisation du formulaire de précommande */ 
+ h3{
+  font-size: 40px !important;
+ }
+ .pre-order-form-block{
+  margin: auto !important;
+  width: 70%;
   display: flex;
-  
+  flex-direction: column;
+  justify-content: center;
+}
+
+.pre-order-form{
+display: flex ;
+justify-content: space-between;
+padding-top: 65px;
+}
+.form-column-1, .form-column-2{
+width: 50%;
+}
+
+.form-column-1{
+padding-right: 70px !important;
+border-right: 1px solid #FFFFFF;
+padding-bottom: 0 !important;
 }
 
 .form-column-2{
-  padding-left: 150px !important;
+padding-left: 70px !important;
+margin-right: 0 !important;
+}
+.pre-order-title-form{
+font-weight: 700 !important;
 }
 
+.field-blocks{
+  margin-right: 0;
+  margin-top: 30px !important;
+  width: 112% !important;
+}
+.pre-order-fields{
+  font-weight: 400 !important;
+  font-size: 28px !important;
+}
+
+p{
+  margin-bottom: 0 !important;
+}
+
+.input[type="text"], .wpcf7-text{
+border-radius: 8px !important;
+padding: 17px 15px !important;
+margin-top: 6px !important;
+}
+
+.submit-order{
+  margin: auto;
+  margin-top: 40px;
+  text-align: center;
+
+}
+
+.wpcf7-spinner{
+display: none !important;
+}
+
+
+.wpcf7-form-control{
+height: 90px !important;
+width: 89% !important;
+}
+.wpcf7-center-block{
+  margin: auto !important;
+  text-align: center;
+  width: 20% !important;
+
+}
+
+.wpcf7-submit{
+  border-radius: 4px;
+  padding: 13px 50px !important;
+  height: 60px !important;
+  font-size: 16px !important;
+  text-align: center;
+  width: 100%;
+}
  /* FOOTER */
  #site-footer {
    position: fixed;
@@ -484,32 +503,92 @@ nav ul li:last-child {
   color: #000000 !important;
 }
 .footer-link:hover{
-  color: #E0B9B4 !important;
+  color: #C02E44 !important;
 }
 
 /* MEDIA QUERIES */
+@media (max-width: 1810px) {
+  .submit-quantity {
+    padding: 18px 43px;
+}
+
+.product-name{
+  font-size: 20px !important;
+}
+}
+
 /* Pour les petits laptops et desktops */
-@media (max-width: 1530px) {
+@media (max-width: 1896px) {
   .inside-header{
     padding: 0 !important;
   }
 }
 
-@media (max-width: 1376px) {
+@media (max-width: 1582px) {
+
+  .submit-quantity {
+    padding: 18px 33px;
+}
+.wpcf7-center-block{
+  width: 25% !important;
+}
+
+.wpcf7-form-control {
+  height: 70px !important;
+}
+}
+
+@media (max-width: 1468px) {
+  h3{
+    font-size: 24px !important;
+  }
+
+  .pre-order-fields{
+    font-size: 18px !important;
+  }
+  .submit-quantity {
+    padding: 18px 23px;
+}
+  .quantity-submit{
+    padding: 20px 19px !important;
+  }
+
+  .wpcf7-submit{
+    padding: 10px 20px !important;
+   
+  }
+}
+@media (max-width: 1353px) {
+  .submit-quantity {
+    padding: 18px 13px;
+}
   .quantity-submit{
     padding: 20px 19px !important;
   }
 }
 
 /* Pour tablettes en mode paysage et petits desktops */
+/* Pour tablettes en mode portrait */
 
-@media (max-width: 1200px) {
+
+@media (max-width: 1239px) {
+  .product-name{
+    top: 44px;
+    font-size: 15px !important;
+  }
   .quantity-submit{
     padding: 20px 50px !important;
     
   }
   .width-block-m2 {
     flex-direction: column !important;
+  }
+  .quantity-input{
+    width: 39px !important;
+    font-size: 12px;
+  }
+  .quantity-change{
+    width: 35px;
   }
   .pre-order-form{
     flex-direction: column !important;
@@ -521,7 +600,7 @@ nav ul li:last-child {
     border-right: 0 !important;
     padding-right: 0 !important;
     padding-left: 0 !important;
-    margin-left: auto;
+    margin-left: auto; 
     margin-right: auto;
     text-align: center;
 
@@ -536,12 +615,59 @@ nav ul li:last-child {
   .form-column-2{
     padding-bottom: 30px !important;
   }
+  .field-blocks {
+    width: 100% !important;
+}
 
 }
 
+@media (max-width: 1068px) {
+  .product-name{
+    top: 40px;
+  }
+  .quantity-input{
+    height: 54px;
+    font-size: 11px;
+    width: 37px !important;
+  }
+  .quantity-change{
+    height: 27px;
+    width: 25px !important;
+  }
+ .submit-quantity{
+  font-size: 10px !important;
+ }
+}
+
 /* Pour tablettes en mode portrait */
-@media (max-width: 900px) {
- 
+@media (max-width: 956px) {
+ .container-of-product-quantity-blocks{
+  flex-direction: column;
+ }
+
+ .product-quantity-block{
+  width: auto;
+ }
+ .quantity-input{
+  font-size: 16px;
+  width: 68px !important;
+  height: 62px !important;
+ }
+
+ .product-name{
+  top: 125px !important;
+  font-size: 45px !important;
+ }
+
+ .quantity-change{
+  width: 45px !important;
+  height: 31px;
+ }
+
+ .submit-quantity {
+  padding: 19px 121px;
+  font-size: 16px !important;
+}
 }
 
 /* Pour téléphones en mode paysage */
