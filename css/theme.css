@@ -51,6 +51,20 @@ nav ul li:last-child {
 
 
  /*Personnalisation des éléments du body */
+ .site-main{
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+ }
+ .wp-block-group__inner-container{
+  padding-bottom: 0 !important;
+
+ }
+ .wp-block-columns{
+  margin-bottom: 0 !important;
+ }
+ .inside-article{
+  padding-bottom: 0 !important;
+ }
 
  /*Personnalisation des blocs page */ 
  .padding-block-0{
@@ -62,6 +76,9 @@ nav ul li:last-child {
  }
  .top-block{
    margin-top: 38px !important;
+ }
+ .top-block-lg{
+   margin-top: 68px !important;
  }
  .top-block-S{
    margin-top: 12px !important;
@@ -81,8 +98,14 @@ nav ul li:last-child {
    margin-top: -20px !important;
    padding-top: 0 !important;
  }
+ .top-separator-block{
+  margin-top: 0 !important;
+ }
  .down-block{
-   margin-bottom: 52px !important;
+   margin-bottom: 82px !important;
+ }
+ .down-block-lg{
+   margin-bottom: 82px !important;
  }
  .down-block-sm{
    margin-bottom: 17px !important;
@@ -104,6 +127,9 @@ nav ul li:last-child {
   margin-bottom: 0 !important;
   padding-bottom: 0 !important;
  }
+ .down-block-1 {
+  margin-bottom: 60px !important;
+}
  .center-block{
   margin-top: auto !important;
  }
@@ -114,17 +140,50 @@ nav ul li:last-child {
   margin: auto !important;
  }
  .center-block-left-right{
+  width: 50%;
   position: relative !important;
   margin-left: auto !important;
   margin-right: auto !important;
   align-items: center !important;
   justify-content: center !important;
- z-index: 10 !important;
+  z-index: 10 !important;
+  flex-basis: 100% !important; ;
  }
 .left-block{
   margin-left: 0 !important;
   padding-left: 0 !important;
 
+}
+.group-block{
+  margin-bottom: 30px !important;
+}
+.who-are-we{
+  width: 100% !important;
+  font-size: 20px !important;
+}
+.font-who-are-we{
+  font-size: 20px !important;
+}
+.img-height{
+  height: 252px !important;
+  object-fit: cover;
+
+}
+.alignright{
+  height: 252px !important;
+  object-fit: cover;
+}
+.wp-image-60{
+  width: auto !important;
+  height: 252px !important;
+}
+.wp-image-55{
+  width: auto !important;
+  height: 252px !important;
+}
+.wp-image-56{
+  width: auto !important;
+  height: 252px !important;
 }
 
 .width-block-m{
@@ -147,6 +206,7 @@ nav ul li:last-child {
   justify-content: center !important;
   align-items: center !important;
   margin: 0px auto !important;
+  margin-bottom: 50px !important;
   padding-bottom: 0 !important;
   padding-top: 0 !important;
 
@@ -154,10 +214,12 @@ nav ul li:last-child {
 
  .negative-down-block{
    margin-top: -80px !important;
+   width: 100% !important;
  }
  .block-size{
    flex-basis: 80% !important;
    text-align: center;
+  
  }
 
  /*Personnalisation du 1er formulaire */
@@ -188,6 +250,15 @@ nav ul li:last-child {
  .button-settings{
    padding: 40px 40px !important;
  }
+ .wp-block-button{
+  padding: 40px 20px !important;
+  margin-top: 50px !important;
+ }
+ .wp-block-button__link{
+  padding:  25px 0 !important;
+  width: 100% !important;
+
+ }
 
  /*Personnalisation des bordures de block */
  .parent-rounded-container {
@@ -201,23 +272,24 @@ nav ul li:last-child {
   z-index: -1;
   border-bottom: 10px solid #e3d9d0;
   padding-top: 80px !important;
+  padding-left: 40px;
+  padding-right: 40px;
   left: 50%;
   transform: translateX(-50%); /* Centrage parfait horizontalement */
   width: 200%;
   border-radius: 0 0 45% 45%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
 }
- .border-block2 {
-   position: absolute;
-   border-radius: 50% / 100%; /* Arrondi horizontal à 50% et vertical à 100% pour l'effet ovale en bas */
-   padding-top: 135px !important;
-   padding-bottom: 0px !important;
-   margin-top: 0;
-   top: 0;
-   left: 53.5%; /* Position horizontale initiale (centrée par rapport au parent) */
-   transform: translateX(-50%); /* Centrage parfait horizontalement */
-   width: 125%;
+
+.border-block2 {
+  position: relative;
+  z-index: -1;
+  padding-top: 80px !important;
+  padding-left: 40px;
+  padding-right: 40px;
+  left: 50%;
+  transform: translateX(-50%); /* Centrage parfait horizontalement */
+  width: 125%;
    border-radius: 0 0 100% 100%; /* Les deux premiers zéros sont pour les coins supérieurs, les 25px sont pour les coins inférieurs */
-   overflow: hidden; /* Assurez-vous que le contenu interne s'adapte également à cette forme arrondie */
 }
  
 /* Conteneur parent avec position relative */
@@ -233,14 +305,14 @@ nav ul li:last-child {
 /* Style pour superposer les images */
 .left-lief{
    position: absolute;
-   left: 43.8%;
+   left: 45%;
    top: 66.6%;
    transform: translate(-50%, -50%);
    z-index: 1;
 }
 .right-lief{
    position: absolute;
-   left: 56%;
+   left: 54.9%;
    top: 66.6%;
    transform: translate(-50%, -50%);
    z-index: 1;
@@ -255,7 +327,7 @@ nav ul li:last-child {
 .vegetal2{
   position: absolute;
   left: 38.5%;
-  top: 63%;
+  top: 67%;
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -265,7 +337,7 @@ nav ul li:last-child {
   margin-top: 0 !important;
   position: absolute;
   left: 88%;
-  top: 73%;
+  top: 75%;
   transform: translate(-50%, -50%);
   z-index: 1;
 
@@ -454,8 +526,9 @@ margin-top: 6px !important;
 
 .submit-order{
   margin: auto;
-  margin-top: 40px;
+  margin-top: 50px;
   text-align: center;
+  margin-bottom: 70px !important;
 
 }
 
@@ -485,10 +558,8 @@ width: 89% !important;
 }
  /* FOOTER */
  #site-footer {
-   position: fixed;
    bottom: 0;
    width: 100%;
-   margin-top: 10px !important;
    margin-bottom: 0px !important;
    padding: 25px;
    padding-bottom: 0px;
@@ -508,6 +579,11 @@ width: 89% !important;
 
 /* MEDIA QUERIES */
 @media (max-width: 1810px) {
+  .wp-block-group__inner-container {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-basis: 100% !important;
+}
   .submit-quantity {
     padding: 18px 43px;
 }
@@ -518,14 +594,41 @@ width: 89% !important;
 }
 
 /* Pour les petits laptops et desktops */
-@media (max-width: 1896px) {
+@media (max-width: 1873px) {
   .inside-header{
     padding: 0 !important;
+    max-width: 1798px !important;
   }
+ 
+}
+@media (max-width: 1798px) {
+   /* ACCUEIL */
+ .vegetal3{
+  top: 75%;
+}
+}
+@media (max-width: 1730px) {
+   /* ACCUEIL */
+ .vegetal3{
+  top: 77%;
+}
 }
 
-@media (max-width: 1582px) {
 
+@media (max-width: 1699px) {
+     /* ACCUEIL */
+  .vegetal3{
+    top: 80%;
+  }
+  
+}
+@media (max-width: 1582px) {
+  /* ACCUEIL */
+  .vegetal3{
+    top: 81%;
+  }
+
+  /* COMMANDER */
   .submit-quantity {
     padding: 18px 33px;
 }
@@ -542,6 +645,10 @@ width: 89% !important;
   h3{
     font-size: 24px !important;
   }
+  /* ACCUEIL */
+  .vegetal3{
+    top: 87% !important;
+  }
 
   .pre-order-fields{
     font-size: 18px !important;
@@ -555,8 +662,14 @@ width: 89% !important;
 
   .wpcf7-submit{
     padding: 10px 20px !important;
-   
   }
+}
+@media (max-width: 1440px) {
+  .site-main {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+    flex-basis: 100% !important;
+}
 }
 @media (max-width: 1353px) {
   .submit-quantity {
@@ -566,12 +679,49 @@ width: 89% !important;
     padding: 20px 19px !important;
   }
 }
+@media (max-width: 1300px) {
+
+  /* ACCUEIL */
+
+  
+ .inside-article {
+  padding:  0px 0 !important;
+}
+  .alignwide{
+    width: 100% !important;
+    margin-left: 0 !important;
+  }
+  .center-block-1 {
+    font-size: 40px !important;
+  }
+  .center-block-2 {
+    font-size: 40px !important;
+  }
+  .center-block {
+    font-size: 40px !important;
+    margin-bottom: 10px !important;
+
+  }
+
+  /* COMMANDER */
+
+  .top-order-block{
+    margin-top: 40px !important;
+  }
+
+}
 
 /* Pour tablettes en mode paysage et petits desktops */
 /* Pour tablettes en mode portrait */
 
 
 @media (max-width: 1239px) {
+    /* Page ACCUEIL */
+.vegetal3{
+  top: 92% !important
+}
+
+  /* Page commander */
   .product-name{
     top: 44px;
     font-size: 15px !important;
@@ -622,6 +772,60 @@ width: 89% !important;
 }
 
 @media (max-width: 1068px) {
+  .mobmenur-container {
+    margin-right: 0px !important;
+    margin-top: 0 !important;
+  }
+  .mob-menu-logo-holder {
+    margin-left: 12.5px !important;
+  }
+  #wpadminbar{
+    width: 105.228% !important;
+  }
+ .header-image {
+    width: 50% !important;
+  }
+
+  /* Page ACCUEIL */
+
+.center-block {
+    font-size: 22px !important;
+}
+.center-block-1 {
+  font-size: 22px !important;
+}
+.center-block-2 {
+    font-size: 23px !important;
+}
+.vegetal3{
+  top: 94% !important;
+}
+.wp-block-column {
+  width: 100%;
+}
+.wp-block-cover{
+  height: 52px !important;
+}
+.tablet-block{
+  flex-direction: column !important;
+  width: 100% !important;
+}
+.img-block{
+  margin-left: 0 !important;
+  float:  left !important;
+  height: 135px !important;
+}
+.adjust-central-block-members{
+  margin-bottom: 22px !important;
+}
+
+/* NOUS RENCONTRER */
+.padding-block-form{
+  flex-basis: 44% !important;
+  padding-left: 25px !important;
+  padding-right: 25px !important;
+}
+/* Page commander */
   .product-name{
     top: 40px;
   }
@@ -637,10 +841,148 @@ width: 89% !important;
  .submit-quantity{
   font-size: 10px !important;
  }
+ .width-block-m{
+  margin: 0 !important;
+  margin-bottom: 1px !important;
+  margin-right: 0;
+  line-height: 0;
+ }
+ /* FOOTER */
+
 }
 
 /* Pour tablettes en mode portrait */
 @media (max-width: 956px) {
+  html, body {
+    overflow-x: hidden;
+    
+  }
+  
+  .main-navigation{
+    background-color: transparent !important;;
+  }
+  h2{
+    font-size: 27px !important;
+  }
+
+  .wp-image-86{
+width: 125px !important;
+  }
+  .mobmenur-container {
+    top: 0px;
+    margin-right: 5px;
+    margin-top: 0 !important;
+}
+
+/* Page ACCUEIL */
+#page{
+  height: auto !important;
+}
+#main{
+  height: auto !important;
+}
+
+.left-lief{
+  left: 40.8%;
+  top: 63%;
+}
+.right-lief{
+  left: 59% !important;
+  top: 63% !important;
+
+}
+.negative-down-block{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  width: auto !important;
+}
+
+.top-block{
+  margin-bottom: 50px !important;
+}
+.wp-block-buttons>.wp-block-button.wp-block-button__width-25 {
+  width: 50%;
+  margin-left: auto !important;
+  margin-right: auto !important;
+}
+.group-block{
+  width: 100% !important;
+  margin: auto !important;
+  margin-bottom: 30px !important;
+  text-align: center;
+  gap: 30px !important;
+}
+.img-block{
+  margin: auto !important;
+  text-align: center;
+  float: none !important;
+  height: 135px !important;
+  justify-content: center;
+  
+}
+.img-width{
+width: 123px !important;
+}
+.alignright {
+  
+  height: 135px !important;
+}
+.width-block-m{
+  margin-top: -20px !important;
+  /* margin-left: -40px !important;
+  width: calc(100% + 80px) !important;
+  max-width: calc(100% + 80px); */
+}
+.alignright{
+  margin: 0 !important;
+}
+.wp-block-button{
+  margin-top: 30px !important;
+}
+
+/* Page Nous Rencontrer */
+.width-block-meet-us{
+  width: 60% !important;
+  max-width: 60% !important;
+  margin-left: auto !important;
+  margin-right: auto !important;
+  margin-top: 90px !important;
+}
+
+.border-block2{
+  padding-top: 0 !important;
+  border-radius: 0 0 30% 25%;
+}
+.wp-block-group__inner-container{
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
+.down-block-0{
+ padding-left: 0 !important;
+ padding-right: 0 !important;
+}
+.width-block-m1{
+  width: 110% !important;
+}
+.vegetal3 {
+  top: 96% !important;
+}
+.vegetal2{
+  left: 35.5%;
+  top: 70%;
+}
+.center-button{
+  margin-top: 40px !important;
+  padding-left: 60px !important;
+  padding-right: 60px !important;
+}
+/* Page commander */
+.inside-article{
+  padding-left: 0 !important;
+  padding-right: 0 !important;
+}
  .container-of-product-quantity-blocks{
   flex-direction: column;
  }
@@ -655,8 +997,8 @@ width: 89% !important;
  }
 
  .product-name{
-  top: 125px !important;
-  font-size: 45px !important;
+  top: 30% !important;
+  font-size: 35px !important;
  }
 
  .quantity-change{
@@ -665,22 +1007,277 @@ width: 89% !important;
  }
 
  .submit-quantity {
-  padding: 19px 121px;
+  padding: 19px 80px;
   font-size: 16px !important;
+}
+.wpcf7-center-block {
+  width: 50% !important;
 }
 }
 
 /* Pour téléphones en mode paysage */
-@media (max-width: 600px) {
+
+@media (max-width: 780px) {
+  .mobile-menu-control-wrapper {
+    margin-top: 0 !important;
+}
+
+  /* ACCUEIL */
+
+  .group-block{
+    width: 60% !important;
+  }
+  .left-lief{
+    left: 40.61%;
+    top: 63%;
+  }
+  /* NOUS RENCONTRER */
+  .vegetal3{
+    top: 99% !important;
+  }
+  .width-block-m1 {
+    width: 90% !important;
+  }
+
+/* COMMANDER */
+  .wpcf7-form-control{
+    height: 60px !important;
+    width: 100% !important;
+  }
  
+  .wpcf7-center-block{
+    width: 100% !important;
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .submit-order{
+    width: 50% !important;
+    display: flex;
+    justify-content: center;
+  }
+  .wpcf7-submit{
+    width: 100% !important;
+  }
+  P{
+    width: 100% !important;
+  }
 }
 
 /* Pour téléphones en mode portrait */
+@media  (max-width: 538px){
+  /* ACCUEIL */
+  .left-lief{
+    left: 42.8%;
+    top: 67%;
+  }
+  .right-lief{
+      left: 56.8% !important;
+      top: 67% !important;
+  }
+  /* NOUS RENCONTRER */
+    .vegetal3{
+      top: 100.5% !important;
+    }
+  }
+
+
+   
+
 @media (max-width: 480px) {
+#content{
+    width: 100%;
+  }
   h2{
+    font-size: 21px !important;
+  }
+  p{
     font-size: 25px !important;
   }
- h3{
+  /* Page ACCUEIL */
+  .wp-block-buttons>.wp-block-button.wp-block-button__width-25 {
+    width: 80%;
+  }
+  .center-block-left-right{
+    width: 63% !important;
+    padding-left: 0;
+    padding-right: 0;
+  }
+  .padding-block{
+    padding-left: 25px !important;
+    padding-right: 25px !important;
+  }
+  .padding-block-l{
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+  .left-lief{
+    height: 61% !important;
+    width: 34% !important;
+    left: 42.8%;
+    top: 75%;
+  }
+  .right-lief{
+    height: 61% !important;
+    width: 34% !important;
+    left: 56.5% !important;
+    top: 75% !important;
+  }
+  .margin-home-block{
+   width: 70% !important;
+   margin-left: auto !important;
+   margin-right: auto !important;
+    }
+    
+  /* NOUS RENCONTRER */
+  .font-meet-us{
+    font-size: 30px !important;
+  }
+  .vegetal1{
+    top: 13%;
+  }
+  .width-block-m1 {
+    width: 90% !important;
+  }
+  .vegetal3 {
+    top: 100.4%;
+  }
+  .vegetal2 {
+    left: 19.5%;
+    top: 71%;
+  }
+  .top-block-meet-us{
+    margin-top: 40px !important;
+  }
+
+  /* Page commander */
+  .top-block-order {
+    margin-top: 5px !important;
+    margin-bottom: 0 !important;
+  }
+.product-quantity-block{
+    width: 90% !important;
+    margin: 10px 0 !important;
+  } 
+.product-name {
+    top: 30% !important;
+    font-size: 18px !important;
+}
+.quantity-controls{
+  margin-bottom: 20px !important;
+}
+.quantity-input {
+  font-size: 16px;
+  width: 45px !important;
+  height: 50px !important;
+}
+.quantity-change {
+  width: 35px !important;
+  height: 25px;
+  font-size: 17px;
+}
+.submit-quantity {
+  padding: 19px 21px;
+  font-size: 10px !important;
+}
+
+
+h3{
+  font-size: 22px !important;
   text-align: center !important;
  }
+ .wp-block-column{
+  width: 100% !important;
+ }
+ .pre-order-form-block{
+  margin: auto !important;
+  width: 85%;
+ }
+ .wpcf7-form-control {
+  height: 50px !important;
+  width: 100% !important;
+}
+.submit-order{
+  width: 100% !important;
+  display: flex;
+  justify-content: center;
+}
+.wpcf7-submit{
+  width: 70% !important;
+}
+}
+@media (max-width:450px) {
+    /* NOUS RENCONTRER */
+    .vegetal3{
+      top: 101.5% !important;
+    }
+  
+}
+
+/* Pour téléphones de très petites tailles */
+@media (max-width: 300px) {
+  h2{
+    font-size: 16px !important;
+  }
+  .site-logo{
+    width: 50% !important;
+  }
+  .header-image{
+    margin-left: 0 !important;
+    width: 100% !important;
+  }
+  .size-full{
+    max-width: 43% !important;
+  }
+
+  /* ACCUEIL */
+  .wp-image-86 {
+    width: 86px !important;
+  }
+  .width-block-meet-us{
+  max-width: 80% !important;
+  font-size: 24px !important;
+  margin-bottom: 0 !important;
+  }
+  .top-block-meet-us{
+    font-size: 24px !important;
+    margin-bottom: 0 !important;
+  }
+  .center-block-left-right{
+    width: 63% !important;
+  }
+  .center-block{
+    font-size: 25px !important;
+    margin-bottom: 60px !important;
+  }
+  .center-block-1{
+    font-size: 25px !important;
+
+  }
+  .center-block-2{
+    font-size: 25px !important;
+  }
+  .down-block-1{
+    margin-bottom: 0 !important;
+  }
+  .width-block-m{
+    margin-top: 10px !important;
+  }
+  .group-block {
+    width: 90% !important;
+  }
+  .vegetal2 {
+    left: 25.5%;
+    top: 74%;
+  }
+  
+  /* NOUS RENCONTRER */
+  .vegetal3{
+    top: 102.5% !important;
+  }
+  /* Commander */
+  .down-block-1 {
+    margin-bottom: 20px !important;
+}
+
 }
