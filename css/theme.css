@@ -996,6 +996,9 @@ width: 123px !important;
   padding-left: 60px !important;
   padding-right: 60px !important;
 }
+.bottom-block-who-are-we {
+  margin-bottom: 0px !important;
+}
 /* Page commander */
 .inside-article{
   padding-left: 0 !important;
@@ -1096,6 +1099,9 @@ width: 123px !important;
   /* NOUS RENCONTRER */
     .vegetal3{
       top: 100.5% !important;
+    }
+    .bottom-block-who-are-we {
+      margin-bottom: 0px !important;
     }
   }
 
