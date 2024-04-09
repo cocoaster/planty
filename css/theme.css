@@ -818,7 +818,9 @@ width: 89% !important;
 .adjust-central-block-members{
   margin-bottom: 22px !important;
 }
-
+.bottom-block-who-are-we{
+  margin-bottom:  100px !important;
+}
 /* NOUS RENCONTRER */
 .padding-block-form{
   flex-basis: 44% !important;
@@ -911,6 +913,7 @@ width: 125px !important;
   margin-bottom: 30px !important;
   text-align: center;
   gap: 30px !important;
+
 }
 .img-block{
   margin: auto !important;
@@ -918,7 +921,12 @@ width: 125px !important;
   float: none !important;
   height: 135px !important;
   justify-content: center;
-  
+  align-items: flex-start !important;
+  vertical-align: baseline !important;
+}
+
+.is-vertically-aligned-center{
+  align-self: first baseline !important;
 }
 .img-width{
 width: 123px !important;
@@ -939,8 +947,18 @@ width: 123px !important;
 .wp-block-button{
   margin-top: 30px !important;
 }
+.align-block{
+  align-self: flex-start !important;
+  
+}
+.bottom-block-who-are-we{
+  margin-bottom:  100px !important;
+}
 
 /* Page Nous Rencontrer */
+/* .who-are-we{
+  display: flex !important;
+} */
 .width-block-meet-us{
   width: 60% !important;
   max-width: 60% !important;
@@ -1270,12 +1288,12 @@ h3{
     left: 25.5%;
     top: 74%;
   }
-  
+
   /* NOUS RENCONTRER */
   .vegetal3{
     top: 102.5% !important;
   }
-  /* Commander */
+  /* COMMANDER */
   .down-block-1 {
     margin-bottom: 20px !important;
 }

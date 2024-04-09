@@ -75,7 +75,7 @@ add_shortcode('product_quantities', 'insert_product_with_quantity_controls');
 
 // Fonction pour ajouter l'item admin quand un usager est conneecter à wordpress
 function add_admin_menu_item_conditionally( $items, $args ) {
-    if ( is_user_logged_in() && 'primary' === $args->theme_location ) {
+    if (is_user_logged_in() && 'primary' === $args->theme_location) {
         // Créez le nouvel élément de menu
         $new_item = '<li class="menu-item"><a href="' . admin_url() . '">Admin</a></li>';
         
@@ -91,7 +91,8 @@ function add_admin_menu_item_conditionally( $items, $args ) {
 
     return $items;
 }
-add_filter( 'wp_nav_menu_items', 'add_admin_menu_item_conditionally', 10, 2 );
+add_filter( 'wp_nav_menu_items', 'add_admin_menu_item_conditionally', 100, 2 );
+
 
 
 
@@ -191,6 +192,16 @@ function ajouter_mon_script() {
         });
     }
 });
+jQuery(document).ready(function($) {
+    var adminUrl = "<?php echo admin_url(); ?>";
+    var newItem = '<li class="menu-item"><a href="' + adminUrl + '">Admin</a></li>';
+    
+    if ( $(window).width() < 1068 ) {
+        $('#mobmenuright li').eq(0).after(newItem); // Ajoute newItem après le premier élément li
+    }
+});
+
+
 
     </script>
     <?php
