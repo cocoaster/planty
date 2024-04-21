@@ -1,6 +1,6 @@
 <?php
 
-// Action qui permet de charger des scripts dans le thème
+// Action qui permet de charger des fichiers css dans le thème
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles(){
     // Chargement du style.css du thème parent Hello
