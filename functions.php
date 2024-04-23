@@ -173,7 +173,7 @@ function ajouter_mon_script() {
                 isSubmitting = true; // Marque que la soumission a commencé
 
                 const container = document.getElementById('dynamic-fields-container');
-                container.innerHTML = ''; // Nettoye les champs précédents
+                container.innerHTML = ''; // Nettoie les champs précédents
 
                 const quantityFields = document.querySelectorAll('.quantity-input');
                 quantityFields.forEach(field => {
@@ -203,7 +203,7 @@ function ajouter_mon_script() {
     }
 });
 
-
+// Ajout de l'item Admin dans le menu mobile
 jQuery(document).ready(function($) {
     var adminUrl = "<?php echo admin_url(); ?>";
     var newItem = '<li class="menu-item"><a href="' + adminUrl + '">Admin</a></li>';

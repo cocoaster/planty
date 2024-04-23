@@ -465,6 +465,7 @@ nav ul li:last-child {
 
 .quantity-input {
   -moz-appearance: textfield; /* Firefox */
+  appearance: textfield; /* Standard */
 }
 
 
