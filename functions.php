@@ -102,18 +102,22 @@ function custom_dynamic_field_in_mail_content($contact_form) {
     if ($submission) {
         $data = $submission->get_posted_data();
         $dynamic_fields_info = "";
+        $products_info = array(); // Initialisez le tableau pour éviter des erreurs si vide.
 
         foreach ($data as $name => $value) {
             if (strpos($name, 'product-') === 0) {
-                $id = explode('-', $name)[1];
-                $fieldType = explode('-', $name)[2];
+                list(, $id, $fieldType) = explode('-', $name); // Sécurisation de l'extraction des données
                 $products_info[$id][$fieldType] = $value;
             }
         }
 
         foreach ($products_info as $info) {
             if (!empty($info['name']) && isset($info['quantity'])) {
-                $dynamic_fields_info .= "Produit : " . $info['name'] . " - Quantité : " . $info['quantity'] . "\n";
+                // Supprimez la balise <br> du nom du produit
+                $productName = str_replace('<br>', '', $info['name']);
+                $productName = sanitize_text_field($productName); // Nettoyez le nom pour la sécurité
+                $quantity = intval($info['quantity']); // Assurez-vous que la quantité est un nombre
+                $dynamic_fields_info .= "Produit : " . $productName . " - Quantité : " . $quantity . "\n";
             }
         }
 
@@ -125,7 +129,15 @@ function custom_dynamic_field_in_mail_content($contact_form) {
 }
 add_action('wpcf7_before_send_mail', 'custom_dynamic_field_in_mail_content');
 
+function my_form_submission_handler($contact_form) {
+    // Vous pourriez avoir besoin d'inclure vos propres logiques de traitement ici
+    // ...
 
+    // Après le traitement
+    $url = site_url('confirmation_page.php?submission=success');
+    wp_redirect($url);
+    exit();
+}
 
 function ajouter_mon_script() {
     ?>
@@ -192,6 +204,8 @@ function ajouter_mon_script() {
         });
     }
 });
+
+
 jQuery(document).ready(function($) {
     var adminUrl = "<?php echo admin_url(); ?>";
     var newItem = '<li class="menu-item"><a href="' + adminUrl + '">Admin</a></li>';
@@ -200,8 +214,6 @@ jQuery(document).ready(function($) {
         $('#mobmenuright li').eq(0).after(newItem); // Ajoute newItem après le premier élément li
     }
 });
-
-
 
     </script>
     <?php
