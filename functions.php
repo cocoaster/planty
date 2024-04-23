@@ -1,6 +1,6 @@
 <?php
 
-// Action qui permet de charger des fichiers css dans le thème
+// Fontion qui permet de charger des fichiers css dans le thème
 add_action('wp_enqueue_scripts', 'theme_enqueue_styles');
 function theme_enqueue_styles(){
     // Chargement du style.css du thème parent Hello
@@ -14,7 +14,7 @@ function insert_product_with_quantity_controls() {
     $args = array(
         'post_type' => 'produits',
         'posts_per_page' => -1,
-        'orderby' => 'date', // Trier par date
+        'orderby' => 'date', // Trie par date
         'order' => 'ASC' // Ordre croissant
     );
     $query = new WP_Query($args);
@@ -27,7 +27,7 @@ function insert_product_with_quantity_controls() {
         $image_url = wp_get_attachment_image_url($image_id, 'full');
         $name = get_field('nom_du_produit', $product_id);
 
-        // Escaper d'abord le contenu dynamique
+        // Echapper d'abord le contenu dynamique
         $name = esc_html($name);
 
         // Modification du nom du produit si nécessaire
@@ -76,16 +76,16 @@ add_shortcode('product_quantities', 'insert_product_with_quantity_controls');
 // Fonction pour ajouter l'item admin quand un usager est conneecter à wordpress
 function add_admin_menu_item_conditionally( $items, $args ) {
     if (is_user_logged_in() && 'primary' === $args->theme_location) {
-        // Créez le nouvel élément de menu
+        // Créer le nouvel élément de menu
         $new_item = '<li class="menu-item"><a href="' . admin_url() . '">Admin</a></li>';
         
-        // Divisez les éléments de menu existants en un tableau
+        // Diviser les éléments de menu existants en un tableau
         $menu_items = explode('</li>', $items);
         
-        // Insérez le nouvel élément à la position souhaitée
+        // Insértion du nouvel élément à la position 2
         array_splice($menu_items, 1, 0, $new_item); // Le 1 ici indique la position après le premier élément
         
-        // Recombinez les éléments de menu en une chaîne
+        // Recombiner les éléments de menu en une chaîne
         $items = implode('</li>', $menu_items);
     }
 
@@ -102,7 +102,7 @@ function custom_dynamic_field_in_mail_content($contact_form) {
     if ($submission) {
         $data = $submission->get_posted_data();
         $dynamic_fields_info = "";
-        $products_info = array(); // Initialisez le tableau pour éviter des erreurs si vide.
+        $products_info = array(); // Initialise le tableau pour éviter des erreurs si vide.
 
         foreach ($data as $name => $value) {
             if (strpos($name, 'product-') === 0) {
@@ -113,15 +113,15 @@ function custom_dynamic_field_in_mail_content($contact_form) {
 
         foreach ($products_info as $info) {
             if (!empty($info['name']) && isset($info['quantity'])) {
-                // Supprimez la balise <br> du nom du produit
+                // Supprime la balise <br> du nom du produit
                 $productName = str_replace('<br>', '', $info['name']);
-                $productName = sanitize_text_field($productName); // Nettoyez le nom pour la sécurité
-                $quantity = intval($info['quantity']); // Assurez-vous que la quantité est un nombre
+                $productName = sanitize_text_field($productName); // Nettoie le nom pour la sécurité
+                $quantity = intval($info['quantity']); // Vérifie que la quantité est un nombre
                 $dynamic_fields_info .= "Produit : " . $productName . " - Quantité : " . $quantity . "\n";
             }
         }
 
-        // Remplacer le marqueur dans le corps de l'email par les informations dynamiques des produits
+        // Remplace le marqueur dans le corps de l'email par les informations dynamiques des produits
         $mail = $contact_form->prop('mail');
         $mail['body'] = str_replace('[dynamic-fields-info]', $dynamic_fields_info, $mail['body']);
         $contact_form->set_properties(['mail' => $mail]);
@@ -130,10 +130,8 @@ function custom_dynamic_field_in_mail_content($contact_form) {
 add_action('wpcf7_before_send_mail', 'custom_dynamic_field_in_mail_content');
 
 function my_form_submission_handler($contact_form) {
-    // Vous pourriez avoir besoin d'inclure vos propres logiques de traitement ici
-    // ...
 
-    // Après le traitement
+    // Après le traitement pas de renvoie de données au rechargement de la page
     $url = site_url('confirmation_page.php?submission=success');
     wp_redirect($url);
     exit();
@@ -153,7 +151,7 @@ function ajouter_mon_script() {
         let currentValue = parseInt(quantityField.value, 10) || 0;
         currentValue += increment;
         if (currentValue < 0) {
-            currentValue = 0; // Empêcher les quantités négatives
+            currentValue = 0; // Empêche les quantités négatives
         }
         quantityField.value = currentValue;
         quantityField.setAttribute('aria-valuenow', currentValue);
@@ -172,10 +170,10 @@ function ajouter_mon_script() {
         form.addEventListener('submit', function(event) {
             if (!isSubmitting) {
                 event.preventDefault();
-                isSubmitting = true; // Marquer que la soumission a commencé
+                isSubmitting = true; // Marque que la soumission a commencé
 
                 const container = document.getElementById('dynamic-fields-container');
-                container.innerHTML = ''; // Nettoyer les champs précédents
+                container.innerHTML = ''; // Nettoye les champs précédents
 
                 const quantityFields = document.querySelectorAll('.quantity-input');
                 quantityFields.forEach(field => {
@@ -196,10 +194,10 @@ function ajouter_mon_script() {
                     container.appendChild(hiddenNameInput);
                 });
 
-                // Utiliser setTimeout pour gérer des tâches asynchrones ou des mises à jour de DOM qui doivent être achevées avant la soumission
+                // Utilisation de setTimeout pour gérer des tâches asynchrones ou des mises à jour de DOM qui doivent être achevées avant la soumission
                 setTimeout(() => {
                     form.submit(); // Soumettre le formulaire après avoir assuré que tout est prêt
-                }, 100); // Un délai plus court pour réduire l'attente, ajustez selon besoin
+                }, 100); 
             }
         });
     }
